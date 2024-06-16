@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("./theme-material/light.css");
+@import url("./theme-material/light-mc.css");
+@import url("./theme-material/light-hc.css");
+@import url("./theme-material/dark.css");
+@import url("./theme-material/dark-mc.css");
+@import url("./theme-material/dark-hc.css");
+
 @font-face {
   font-family: "NeueMontreal-Light";
   src: url("../assets/fonts/NeueMontreal/NeueMontreal-Light.otf");
@@ -110,8 +117,6 @@
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
-
-  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

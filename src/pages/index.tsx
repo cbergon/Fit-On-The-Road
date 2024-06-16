@@ -1,21 +1,55 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import * as React from "react";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-function Home() {
-  const navigate = useNavigate();
+import AppAppBar from "@app/modules/AppAppBar";
+import Hero from "@app/modules/Hero";
+import LogoCollection from "@app/modules/LogoCollection";
+import Highlights from "@app/modules/Highlights";
+import Pricing from "@app/modules/Pricing";
+import Testimonials from "@app/modules/Testimonials";
+import FAQ from "@app/modules/FAQ";
+import Footer from "@app/modules/Footer";
+import Contact from "@app/modules/Contact";
+
+import "../styles/theme-material/light.css";
+import "../styles/theme-material/light-mc.css";
+import "../styles/theme-material/light-hc.css";
+import "../styles/theme-material/dark.css";
+import "../styles/theme-material/dark-mc.css";
+import "../styles/theme-material/dark-hc.css";
+import EnterpriseFeatures from "@app/modules/EnterpriseFeatures";
+import IndividualFeatures from "@app/modules/IndividualFeatures";
+
+import { style } from "../styles/theme-material/style";
+
+const defaultTheme = createTheme(style);
+
+export default function LandingPage() {
   return (
-    <div>
-      <h1 className="heading-1">Index</h1>
-      <div className="flex gap-2">
-        <button type="button" onClick={() => navigate("/entreprises")}>
-          Go to Entreprises
-        </button>
-        <button type="button" onClick={() => navigate("/particuliers")}>
-          Go to Particuliers
-        </button>
-      </div>
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <CssBaseline />
+      <AppAppBar />
+      <Hero />
+      <Box sx={{ bgcolor: "background.default" }}>
+        <EnterpriseFeatures />
+        <LogoCollection />
+        <IndividualFeatures />
+        <Divider />
+        <Testimonials />
+        <Divider />
+        <Highlights />
+        <Divider />
+        <Pricing />
+        <Divider />
+        <Contact />
+        <Divider />
+        <FAQ />
+        <Divider />
+        <Footer />
+      </Box>
+    </ThemeProvider>
   );
 }
-
-export default Home;
