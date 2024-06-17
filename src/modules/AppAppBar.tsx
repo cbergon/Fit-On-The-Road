@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { alpha } from "@mui/material";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";

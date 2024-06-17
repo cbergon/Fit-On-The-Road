@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -106,7 +106,7 @@ export default function IndividualFeatures() {
             >
               {items.map(({ title }, index) => (
                 <Chip
-                  key={index}
+                  key={`chip-${title}`}
                   label={title}
                   onClick={() => handleItemClick(index)}
                   sx={{
@@ -194,7 +194,7 @@ export default function IndividualFeatures() {
             >
               {items.map(({ icon, title, description }, index) => (
                 <Card
-                  key={index}
+                  key={`card-${title}`}
                   variant="outlined"
                   component={Button}
                   onClick={() => handleItemClick(index)}
