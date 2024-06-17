@@ -13,8 +13,8 @@ import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 
-import collectiveCoachingPic from "../assets/images/Entreprises - Cours à l'année.jpeg";
-import teamBuildingPic from "../assets/images/Entreprises - Team building.jpeg";
+import collectiveCoachingPic from "@assets/images/Entreprises - Cours à l'année.jpeg";
+import teamBuildingPic from "@assets/images/Entreprises - Team building.jpeg";
 
 const items = [
   {

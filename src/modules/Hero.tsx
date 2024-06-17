@@ -6,7 +6,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material";
 
-// import cover from "../assets/images/Particuliers - Cours collectifs.jpeg";
+// import cover from "@assets/images/Particuliers - Cours collectifs.jpeg";
 
 export default function Hero() {
   // #region SCROLLING FUNCTION
@@ -92,7 +92,7 @@ export default function Hero() {
               color="primary"
               onClick={() => scrollToSection("contact")}
             >
-              {`J'y vais !`}
+              {`C'EST PARTI !`}
             </Button>
           </Stack>
         </Stack>

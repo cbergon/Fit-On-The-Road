@@ -10,53 +10,53 @@
 @import url("./theme-material/dark-hc.css");
 
 @font-face {
-  font-family: "NeueMontreal-Light";
-  src: url("../assets/fonts/NeueMontreal/NeueMontreal-Light.otf");
+  font-family: "ProximaNova-Light";
+  src: url("../assets/fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Black.otf");
 }
 
 @font-face {
-  font-family: "NeueMontreal-Light";
+  font-family: "ProximaNova-Light";
   font-style: italic;
-  src: url("../assets/fonts/NeueMontreal/NeueMontreal-LightItalic.otf");
+  src: url("../assets/fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Black.otf");
 }
 
 @font-face {
-  font-family: "NeueMontreal-Regular";
+  font-family: "ProximaNova-Regular";
   font-style: normal;
-  src: url("../assets/fonts/NeueMontreal/NeueMontreal-Regular.otf");
+  src: url("../assets/fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Black.otf");
 }
 
 @font-face {
-  font-family: "NeueMontreal-Regular";
+  font-family: "ProximaNova-Regular";
   font-style: italic;
-  src: url("../assets/fonts/NeueMontreal/NeueMontreal-Italic.otf");
+  src: url("../assets/fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Black.otf");
 }
 
 @font-face {
-  font-family: "NeueMontreal-Medium";
-  src: url("../assets/fonts/NeueMontreal/NeueMontreal-Medium.otf");
+  font-family: "ProximaNova-Medium";
+  src: url("../assets/fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Black.otf");
 }
 
 @font-face {
-  font-family: "NeueMontreal-Medium";
+  font-family: "ProximaNova-Medium";
   font-style: italic;
-  src: url("../assets/fonts/NeueMontreal/NeueMontreal-MediumItalic.otf");
+  src: url("../assets/fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Black.otf");
 }
 
 @font-face {
-  font-family: "NeueMontreal-Bold";
-  src: url("../assets/fonts/NeueMontreal/NeueMontreal-Bold.otf");
+  font-family: "ProximaNova-Bold";
+  src: url("../assets/fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Black.otf");
 }
 
 @font-face {
-  font-family: "NeueMontreal-Bold";
+  font-family: "ProximaNova-Bold";
   font-style: italic;
-  src: url("../assets/fonts/NeueMontreal/NeueMontreal-BoldItalic.otf");
+  src: url("../assets/fonts/Mark\ Simonson\ -\ Proxima\ Nova\ Black.otf");
 }
 
 @layer base {
   html {
-    font-family: "NeueMontreal-Regular", sans-serif;
+    font-family: "ProximaNova-Regular", sans-serif;
     @apply text-primaryBlack h-full;
   }
 
@@ -87,31 +87,31 @@
   }
 }
 
-@layer components {
+/* @layer components {
   .heading-1 {
-    @apply text-4xl font-neueMontreal-Bold tracking-[-3%];
+    @apply text-4xl font-proximaNova-Bold tracking-[-3%];
   }
 
   .heading-1-mobile {
-    @apply text-3.5xl leading-8 font-neueMontreal-Bold tracking-normal;
+    @apply text-3.5xl leading-8 font-proximaNova-Bold tracking-normal;
   }
 
   .heading-2 {
-    @apply text-3xl font-neueMontreal-Bold;
+    @apply text-3xl font-proximaNova-Bold;
   }
 
   .heading-2-mobile {
-    @apply text-2.5xl leading-8 font-neueMontreal-Bold;
+    @apply text-2.5xl leading-8 font-proximaNova-Bold;
   }
 
   .heading-3 {
-    @apply text-lg font-neueMontreal-Bold;
+    @apply text-lg font-proximaNova-Bold;
   }
 
   .heading-3-mobile {
-    @apply text-base leading-6 font-neueMontreal-Bold;
+    @apply text-base leading-6 font-proximaNova-Bold;
   }
-}
+} */
 
 :root {
   font-size: 12px;

@@ -13,8 +13,8 @@ import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 
-import collectiveCoachingPic from "../assets/images/Particuliers - Cours collectifs.jpeg";
-import privateCoachingPic from "../assets/images/Particuliers - Coaching perso.jpg";
+import collectiveCoachingPic from "@assets/images/Particuliers - Cours collectifs.jpeg";
+import privateCoachingPic from "@assets/images/Particuliers - Coaching perso.jpg";
 
 const items = [
   {
