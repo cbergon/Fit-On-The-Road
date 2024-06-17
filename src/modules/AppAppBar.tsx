@@ -18,12 +18,12 @@ const sections = [
     dst: "enterprise-features",
   },
   {
-    title: "Témoignages",
-    dst: "testimonials",
-  },
-  {
     title: "Ambitions",
     dst: "highlights",
+  },
+  {
+    title: "Témoignages",
+    dst: "testimonials",
   },
   {
     title: "Tarifs",
@@ -113,7 +113,7 @@ function AppAppBar() {
               }}
             >
               <img
-                src="/public/logos/Full - Long - Kettle - Fond noir.svg"
+                src="/logos/Full - Long - Kettle - Fond noir.svg"
                 style={logoStyle}
                 alt="logo fit on the road"
               />
@@ -143,7 +143,7 @@ function AppAppBar() {
                 size="small"
                 onClick={() => scrollToSection("contact")}
               >
-                CONTACTER
+                CONTACTEZ-MOI !
               </Button>
             </Box>
             {/* MENU MOBILE VERSION */}
@@ -202,7 +202,7 @@ function AppAppBar() {
                       sx={{ width: "100%" }}
                       onClick={() => scrollToSection("contact")}
                     >
-                      CONTACTER
+                      CONTACTEZ-MOI !
                     </Button>
                   </MenuItem>
                 </Box>

@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function FAQ() {
-  const [expanded, setExpanded] = React.useState<string | false>(false);
+  const [expanded, setExpanded] = React.useState<string | false>("panel1");
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -52,7 +52,7 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+              {`Où se déroulent les cours collectifs à Bois d'Arcy ?`}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -61,12 +61,18 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              You can reach our customer support team by emailing
-              {/* QUICK FIX */}
-              <Link href="root"> support@email.com </Link>
-              or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              {`Dans la zone d'activité sportive à Bois d'Arcy, prêt du Skate Park et du Tennis.`}
             </Typography>
+            <iframe
+              title="collective coaching location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.8261442076073!2d2.028891692670014!3d48.804296685174485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e687ba8069b67d%3A0x9293bf0b0db2f4d1!2sSkate%20Park%20De%20Bois%20D&#39;Arcy!5e0!3m2!1sfr!2sfr!4v1718616366731!5m2!1sfr!2sfr"
+              width="100%"
+              className="rounded-[10px]"
+              height="450"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -79,7 +85,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+              Comment se passe la réservation des séances ?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -88,9 +94,8 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re
-              not completely satisfied, you can return the product within
-              [number of days] days for a full refund or exchange.
+              Une application est mise à votre disposition pour la gestion du
+              planning.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -104,7 +109,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+              {`Y a t'il des séances différentes en fonction du niveau ?`}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -113,14 +118,11 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Our product distinguishes itself through its adaptability,
-              durability, and innovative features. We prioritize user
-              satisfaction and continually strive to exceed expectations in
-              every aspect.
+              {`La taille du groupe étant limitée, cela permet au coach d'accorder à chacun l'attention nécessaire à un accompagnement personnalisé tout en poussant vers la réalisation de soi par l'émulation.`}
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
+        {/* <Accordion
           expanded={expanded === "panel4"}
           onChange={handleChange("panel4")}
         >
@@ -130,7 +132,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -145,7 +147,7 @@ export default function FAQ() {
               support for assistance.
             </Typography>
           </AccordionDetails>
-        </Accordion>
+        </Accordion> */}
       </Box>
     </Container>
   );

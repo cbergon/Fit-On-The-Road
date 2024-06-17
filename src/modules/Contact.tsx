@@ -84,7 +84,7 @@ export default function Contact() {
               }}
             />
             <Button variant="contained" color="primary">
-              {`J'y vais !`}
+              CONTACTEZ-MOI
             </Button>
           </Stack>
         </Box>

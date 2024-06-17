@@ -36,19 +36,19 @@ const footerLinks: FooterColumns[] = [
         scrollTo: "individual-features",
       },
       {
-        name: "Ils nous font confiance",
-        scrollTo: "testimonials",
-      },
-      {
         name: "Ambition",
         scrollTo: "highlights",
+      },
+      {
+        name: "Avis clients",
+        scrollTo: "testimonials",
       },
       {
         name: "Tarifs",
         scrollTo: "pricing",
       },
       {
-        name: "En savoir plus",
+        name: "Questions fréquentes",
         scrollTo: "faq",
       },
     ],
@@ -150,7 +150,7 @@ export default function Footer() {
           {/* LOGO BOX */}
           <Box sx={{ ml: "-15px" }}>
             <img
-              src="/public/logos/Full - Long - Kettle - Fond noir.svg"
+              src="/logos/Full - Long - Kettle - Fond noir.svg"
               style={logoStyle}
               alt="logo fit on the road"
             />

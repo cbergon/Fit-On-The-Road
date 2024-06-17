@@ -13,35 +13,30 @@ import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 
+import collectiveCoachingPic from "../assets/images/Entreprises - Cours à l'année.jpeg";
+import teamBuildingPic from "../assets/images/Entreprises - Team building.jpeg";
+
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
     title: "Cours collectifs en société",
     description:
-      "Offrez à vos salariés le confort d'un coach qui se déplace sur site.",
-    imageLight:
-      'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+      "Offrez à vos salariés le confort d'un coach qui se déplace sur site à l'année.",
+    image: `url("${collectiveCoachingPic}")`,
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
     title: "Team building & événements",
     description:
       "Créer un moment de partage, d'effort et de cohésion pour développer l'esprit d'équipe.",
-    imageLight:
-      'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark:
-      'url("/static/images/templates/templates-images/mobile-dark.png")',
+    image: `url("${teamBuildingPic}")`,
   },
   {
     icon: <DevicesRoundedIcon />,
     title: "Création d'espace forme",
     description:
       "Aménagez vos locaux en fonction de vos besoins afin de permettre à vos salariés de faire du sport en toute autonomie.",
-    imageLight:
-      'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark:
-      'url("/static/images/templates/templates-images/devices-dark.png")',
+    image: `url("${collectiveCoachingPic}")`,
   },
 ];
 
@@ -73,7 +68,8 @@ export default function EnterpriseFeatures() {
                 color="text.secondary"
                 sx={{ mb: { xs: 2, sm: 4 } }}
               >
-                {`Nos activités se concentrent autour de la forme et de l'activité sportive.`}
+                Transformez le bien-être au travail – Intégrez le sport dans
+                votre culture d’entreprise !
               </Typography>
             </div>
             <Grid
@@ -121,10 +117,7 @@ export default function EnterpriseFeatures() {
             >
               <Box
                 sx={{
-                  backgroundImage: (theme) =>
-                    theme.palette.mode === "light"
-                      ? items[selectedItemIndex].imageLight
-                      : items[selectedItemIndex].imageDark,
+                  backgroundImage: items[selectedItemIndex].image,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   minHeight: 280,
@@ -285,14 +278,12 @@ export default function EnterpriseFeatures() {
             >
               <Box
                 sx={{
-                  m: "auto",
-                  width: 420,
-                  height: 500,
-                  backgroundSize: "contain",
-                  backgroundImage: (theme) =>
-                    theme.palette.mode === "light"
-                      ? items[selectedItemIndex].imageLight
-                      : items[selectedItemIndex].imageDark,
+                  width: "100%",
+                  height: "100%",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundImage: items[selectedItemIndex].image,
+                  backgroundRepeat: "no-repeat",
                 }}
               />
             </Card>

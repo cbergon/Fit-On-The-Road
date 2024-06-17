@@ -13,34 +13,29 @@ import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 
+import collectiveCoachingPic from "../assets/images/Particuliers - Cours collectifs.jpeg";
+import privateCoachingPic from "../assets/images/Particuliers - Coaching perso.jpg";
+
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
     title: "Cours collectifs",
     description:
       "Retrouvez les cours collectifs en plein air à Bois d'Arcy. Grâce à l’émulation du groupe, l’entraînement devient plus simple, plus sûr, plus efficace et vous permet de sortir de votre zone de confort.",
-    imageLight:
-      'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+    image: `url("${collectiveCoachingPic}")`,
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
     title: "Coaching privé",
     description:
       "Nos coachs vous accompagnes et vous proposent une prestation sur-mesure s’adaptant à votre niveau, vos souhaits et à vos agendas.",
-    imageLight:
-      'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark:
-      'url("/static/images/templates/templates-images/mobile-dark.png")',
+    image: `url("${privateCoachingPic}")`,
   },
   {
     icon: <DevicesRoundedIcon />,
     title: "Coaching à distance",
     description: "Profitez d’entraînements sur mesure depuis chez vous.",
-    imageLight:
-      'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark:
-      'url("/static/images/templates/templates-images/devices-dark.png")',
+    image: `url("${collectiveCoachingPic}")`,
   },
 ];
 
@@ -74,14 +69,12 @@ export default function IndividualFeatures() {
             >
               <Box
                 sx={{
-                  m: "auto",
-                  width: 420,
-                  height: 500,
-                  backgroundSize: "contain",
-                  backgroundImage: (theme) =>
-                    theme.palette.mode === "light"
-                      ? items[selectedItemIndex].imageLight
-                      : items[selectedItemIndex].imageDark,
+                  width: "100%",
+                  height: "100%",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundImage: items[selectedItemIndex].image,
+                  backgroundRepeat: "no-repeat",
                 }}
               />
             </Card>
@@ -101,7 +94,8 @@ export default function IndividualFeatures() {
                 color="text.secondary"
                 sx={{ mb: { xs: 2, sm: 4 } }}
               >
-                {`Nos activités se concentrent autour de la forme et de l'activité sportive.`}
+                Des objectifs clairs, des résultats concrets – Découvrez le
+                coaching sur mesure !
               </Typography>
             </div>
             <Grid
@@ -149,10 +143,7 @@ export default function IndividualFeatures() {
             >
               <Box
                 sx={{
-                  backgroundImage: (theme) =>
-                    theme.palette.mode === "light"
-                      ? items[selectedItemIndex].imageLight
-                      : items[selectedItemIndex].imageDark,
+                  backgroundImage: items[selectedItemIndex].image,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   minHeight: 280,

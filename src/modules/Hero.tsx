@@ -1,11 +1,12 @@
 import * as React from "react";
-import { alpha } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import { alpha } from "@mui/material";
+
+// import cover from "../assets/images/Particuliers - Cours collectifs.jpeg";
 
 export default function Hero() {
   // #region SCROLLING FUNCTION
@@ -26,48 +27,49 @@ export default function Hero() {
   return (
     <Box
       id="hero"
-      sx={(theme) => ({
+      sx={{
         width: "100%",
-        backgroundImage:
-          theme.palette.mode === "light"
-            ? "linear-gradient(180deg, #CEE5FD, #FFF)"
-            : `linear-gradient(#000, ${alpha("#690000", 0.0)})`,
-        backgroundSize: "100% 20%",
-        backgroundRepeat: "no-repeat",
-      })}
+        // height: "100vh",
+        display: "flex",
+        // backgroundImage: `url("${cover}")`,
+        backgroundImage: `linear-gradient(#000, ${alpha("#690000", 0.0)})`,
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "fit",
+      }}
     >
       <Container
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          height: "100%",
           pt: { xs: 14, sm: 20 },
           pb: { xs: 8, sm: 12 },
         }}
       >
-        <Stack spacing={2} useFlexGap sx={{ width: { xs: "100%", sm: "70%" } }}>
+        <Box sx={{ height: "100%" }} />
+        <Stack
+          spacing={2}
+          useFlexGap
+          sx={{
+            // backdropFilter: "sepia(90%)",
+            width: { xs: "100%", sm: "70%" },
+          }}
+        >
+          {/* HERO CATCHPHRASE */}
           <Typography
+            component="span"
             variant="h1"
+            fontWeight="bold"
             sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              alignSelf: "center",
+              fontSize: "clamp(3rem, 10vw, 3.4rem)",
               textAlign: "center",
-              fontSize: "clamp(3.5rem, 10vw, 4rem)",
+              color: "primary.light",
             }}
           >
-            {/* La salle de sport qui vient à&nbsp; */}
-            <Typography
-              component="span"
-              variant="h1"
-              sx={{
-                fontSize: "clamp(3rem, 10vw, 4rem)",
-                color: "primary.light",
-              }}
-            >
-              La salle de sport qui vient à vous.
-            </Typography>
+            La salle de sport qui vient à vous.
           </Typography>
+          {/* HERO SUBTEXT */}
           <Typography
             textAlign="center"
             color="text.secondary"
@@ -77,6 +79,7 @@ export default function Hero() {
             permettre à chacun de terminer une séance et de progresser quel que
             soit le niveau.
           </Typography>
+          {/* HERO CALL TO ACTION */}
           <Stack
             direction={{ xs: "column", sm: "row" }}
             alignSelf="center"
@@ -84,18 +87,6 @@ export default function Hero() {
             useFlexGap
             sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
           >
-            {/* <TextField
-              id="outlined-basic"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              inputProps={{
-                autoComplete: "off",
-                "aria-label": "Enter your email address",
-              }}
-            /> */}
             <Button
               variant="contained"
               color="primary"
@@ -105,16 +96,13 @@ export default function Hero() {
             </Button>
           </Stack>
         </Stack>
-        {/* <Box
-          id="image"
+        <Box
+          id="video"
           sx={() => ({
             mt: { xs: 8, sm: 10 },
             alignSelf: "center",
             height: { xs: 200, sm: 700 },
             width: "100%",
-            // paddingBottom: "10px",
-            backgroundImage:
-              'url("/src/assets/images/Particuliers - Cours collectifs.jpeg")',
             backgroundSize: "no-repeat",
             backgroundPosition: "center center",
             borderRadius: "10px",
@@ -122,7 +110,18 @@ export default function Hero() {
             outlineColor: alpha("#ED130D", 0.1),
             boxShadow: `0 0 24px 12px ${alpha("#ED130D", 0.2)}`,
           })}
-        /> */}
+        >
+          <iframe
+            width="100%"
+            height="100%"
+            className="rounded-[10px]"
+            src="https://www.youtube.com/embed/kivUfMytm4o?si=EhP-CYCddSazkvKt"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </Box>
       </Container>
     </Box>
   );

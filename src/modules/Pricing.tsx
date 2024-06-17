@@ -112,12 +112,12 @@ export default function Pricing() {
         <Typography component="h2" variant="h4" color="text.primary">
           Tarifs
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        {/* <Typography variant="body1" color="text.secondary">
           Quickly build an effective pricing table for your potential customers
           with this layout. <br />
           It&apos;s built with default Material UI components with little
           customization.
-        </Typography>
+        </Typography> */}
       </Box>
       <Grid container spacing={3} alignItems="stretch" justifyContent="center">
         {tiers.map((tier) => (
@@ -163,7 +163,12 @@ export default function Pricing() {
                     // height: "auto",
                   }}
                 >
-                  <Typography component="h3" variant="h2">
+                  <Typography
+                    component="h3"
+                    variant="h2"
+                    height={tier.title === "Entreprise" ? "110.75px" : "72px"}
+                    // lineHeight={}
+                  >
                     {typeof tier.price === "string" && tier.price}
                     {typeof tier.price !== "string" &&
                       tier.title === "Cours collectifs" &&
