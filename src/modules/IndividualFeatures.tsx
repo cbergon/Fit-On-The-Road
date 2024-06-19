@@ -13,8 +13,8 @@ import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 
-import collectiveCoachingPic from "@assets/images/Particuliers - Cours collectifs.jpeg";
-import privateCoachingPic from "@assets/images/Particuliers - Coaching perso.jpg";
+import collectiveCoachingPic from "@assets/images/individual-collective-coaching.jpeg";
+import privateCoachingPic from "@assets/images/individual-private-coaching.jpg";
 
 const items = [
   {
@@ -110,20 +110,9 @@ export default function IndividualFeatures() {
                   label={title}
                   onClick={() => handleItemClick(index)}
                   sx={{
-                    borderColor: (theme) => {
-                      if (theme.palette.mode === "light") {
-                        return selectedItemIndex === index
-                          ? "primary.light"
-                          : "";
-                      }
-                      return selectedItemIndex === index ? "primary.light" : "";
-                    },
-                    background: (theme) => {
-                      if (theme.palette.mode === "light") {
-                        return selectedItemIndex === index ? "none" : "";
-                      }
-                      return selectedItemIndex === index ? "none" : "";
-                    },
+                    borderColor:
+                      selectedItemIndex === index ? "primary.light" : "",
+                    background: selectedItemIndex === index ? "none" : "",
                     backgroundColor:
                       selectedItemIndex === index ? "primary.main" : "",
                     "& .MuiChip-label": {
@@ -165,7 +154,7 @@ export default function IndividualFeatures() {
                   {selectedFeature.description}
                 </Typography>
                 <Link
-                  href="root"
+                  href="particuliers"
                   color="primary"
                   variant="body2"
                   fontWeight="bold"
@@ -261,7 +250,7 @@ export default function IndividualFeatures() {
                         {description}
                       </Typography>
                       <Link
-                        href="root"
+                        href="particuliers"
                         color="primary"
                         variant="body2"
                         fontWeight="bold"

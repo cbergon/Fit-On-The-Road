@@ -13,8 +13,8 @@ import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 
-import collectiveCoachingPic from "@assets/images/Entreprises - Cours à l'année.jpeg";
-import teamBuildingPic from "@assets/images/Entreprises - Team building.jpeg";
+import collectiveCoachingPic from "@assets/images/entreprises-collective-coaching.jpeg";
+import teamBuildingPic from "@assets/images/entreprises-team-building.jpeg";
 
 const items = [
   {
@@ -139,7 +139,7 @@ export default function EnterpriseFeatures() {
                   {selectedFeature.description}
                 </Typography>
                 <Link
-                  href="root"
+                  href="entreprises"
                   color="primary"
                   variant="body2"
                   fontWeight="bold"
@@ -235,7 +235,7 @@ export default function EnterpriseFeatures() {
                         {description}
                       </Typography>
                       <Link
-                        href="root"
+                        href="entreprises"
                         color="primary"
                         variant="body2"
                         fontWeight="bold"

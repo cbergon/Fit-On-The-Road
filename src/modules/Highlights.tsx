@@ -15,39 +15,39 @@ import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon />,
-    title: "Adaptable performance",
+    title: "Excellence en Coaching et Formation Continue",
     description:
-      "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
+      "Mettre à disposition des coachs formations et certifications régulières pour garantir les meilleures pratiques et les approches les plus récentes en matière de sport et de bien-être.",
   },
   {
     icon: <ConstructionRoundedIcon />,
-    title: "Built to last",
+    title: "Diversification et Personnalisation des Offres",
     description:
-      "Experience unmatched durability that goes above and beyond with lasting investment.",
+      "Développer des programmes de coaching adaptables qui répondent aux besoins variés des clients, qu'il s'agisse de cours collectifs, séances individuelles, ou de coaching à distance. Proposer des solutions sur mesure basées sur les objectifs personnels de chaque client, leur condition physique et leurs contraintes.",
   },
   {
     icon: <ThumbUpAltRoundedIcon />,
-    title: "Great user experience",
+    title: "Intégration Technologique",
     description:
-      "Integrate our product into your routine with an intuitive and easy-to-use interface.",
+      "Offrir à nos clients la possibilité de réserver leurs cours et l'accès à des ressources exclusives telles que des vidéos d'entraînement, des conseils forme et une communauté en ligne active.",
   },
   {
     icon: <AutoFixHighRoundedIcon />,
-    title: "Innovative functionality",
+    title: "Mobilité et Accessibilité des Services",
     description:
-      "Stay ahead with features that set new standards, addressing your evolving needs better than the rest.",
+      "Développer une salle de sport mobile équipée de matériel modulaires permettant une flexibilité maximale, capable de se déplacer jusqu'aux clients, qu'ils soient des particuliers ou des entreprises, pour offrir des sessions de coaching sur place. Cette solution mobile vise à supprimer les obstacles logistiques et à rendre le sport accessible en tout lieu.",
   },
   {
     icon: <SupportAgentRoundedIcon />,
-    title: "Reliable support",
+    title: "Promotion du Bien-être Holistique",
     description:
-      "Count on our responsive customer support, offering assistance that goes beyond the purchase.",
+      "Intégrer dans la pratique une dimension éducative sur la nutrition, la gestion du stress et le bien-être mental pour compléter l'entraînement physique en offrant une approche globale du bien-être.",
   },
   {
     icon: <QueryStatsRoundedIcon />,
-    title: "Precision in every detail",
+    title: "Soutien à la Communauté et Impact Social",
     description:
-      "Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.",
+      "Donner aux interactions sociales une place conséquente pour permettre aux participants de se rencontrer et d'échanger renforçant ainsi la cohésion de groupe et la motivation collective. Un temps est inclu dans chaque séance, qu'elle soit individuelle ou collective, à l'évaluation de l'état d'esprit pour ainsi adapter le contenu et la pratique, contribuant à un environnement de confiance et de soutien.",
   },
 ];
 
@@ -81,9 +81,10 @@ export default function Highlights() {
             Les ambitions Fit On The Road
           </Typography>
           <Typography variant="body1" sx={{ color: "grey.400" }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer
-            support and precision in every detail.
+            Ces ambitions visent à créer un environnement de coaching sportif où
+            les interactions sociales et le bien-être mental sont autant
+            valorisés que la performance physique, assurant une expérience
+            enrichissante et complète pour chaque participant.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>

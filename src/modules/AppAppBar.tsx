@@ -69,11 +69,16 @@ function AppAppBar() {
         sx={{
           boxShadow: 0,
           bgcolor: "transparent",
-          backgroundImage: "none",
-          mt: 2,
+          backgroundImage: `linear-gradient(#000000, ${alpha("#000000", 0.0)})`,
         }}
       >
-        <Container maxWidth="lg">
+        <Container
+          maxWidth="lg"
+          sx={{
+            backgroundImage: "none",
+            mt: 2,
+          }}
+        >
           <Toolbar
             variant="regular"
             sx={(theme) => ({
@@ -90,16 +95,13 @@ function AppAppBar() {
               maxHeight: 40,
               border: "1px solid",
               borderColor: "divider",
-              boxShadow:
-                theme.palette.mode === "light"
-                  ? `0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)`
-                  : `0 0 1px ${alpha(
-                      "#8B725D",
-                      0.7,
-                    )}, 1px 1.5px 2px -1px ${alpha(
-                      "#8B725D",
-                      0.65,
-                    )}, 4px 4px 12px -2.5px ${alpha("#8B725D", 0.65)}`,
+              boxShadow: `0 0 1px ${alpha(
+                "#8B725D",
+                0.7,
+              )}, 1px 1.5px 2px -1px ${alpha(
+                "#8B725D",
+                0.65,
+              )}, 4px 4px 12px -2.5px ${alpha("#8B725D", 0.65)}`,
             })}
           >
             {/* MENU DESKTOP VERSION */}

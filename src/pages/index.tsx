@@ -14,16 +14,15 @@ import FAQ from "@app/modules/FAQ";
 import Footer from "@app/modules/Footer";
 import Contact from "@app/modules/Contact";
 
-import "../styles/theme-material/light.css";
-import "../styles/theme-material/light-mc.css";
-import "../styles/theme-material/light-hc.css";
-import "../styles/theme-material/dark.css";
-import "../styles/theme-material/dark-mc.css";
-import "../styles/theme-material/dark-hc.css";
+import "@styles/theme-material/light.css";
+import "@styles/theme-material/light-mc.css";
+import "@styles/theme-material/light-hc.css";
+import "@styles/theme-material/dark.css";
+import "@styles/theme-material/dark-mc.css";
+import "@styles/theme-material/dark-hc.css";
 import EnterpriseFeatures from "@app/modules/EnterpriseFeatures";
 import IndividualFeatures from "@app/modules/IndividualFeatures";
-
-import { style } from "../styles/theme-material/style";
+import { style } from "@app/styles/theme-material/style";
 
 const defaultTheme = createTheme(style);
 
