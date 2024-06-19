@@ -1,9 +1,13 @@
 import React from "react";
+
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { IconButton } from "@mui/material";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const logoStyle = {
   width: "140px",
@@ -104,7 +108,7 @@ function Copyright() {
 }
 // #endregion
 
-export default function Footer() {
+function Footer() {
   // #region SCROLLING FUNCTION
   const scrollToSection = (sectionId: string) => {
     const sectionElement = document.getElementById(sectionId);
@@ -231,16 +235,28 @@ export default function Footer() {
             color: "text.secondary",
           }}
         >
-          {/* <IconButton
+          <IconButton
             color="inherit"
-            href="https://x.com/MaterialUI"
-            aria-label="X"
+            href="https://www.linkedin.com/in/fit-on-the-road-a938b312a?utm_source=share&utm_campaign=share_via&utm_content=profile"
+            aria-label="LinkedIn"
             sx={{ alignSelf: "center" }}
+            target="_blank"
           >
-            <TwitterIcon />
-          </IconButton> */}
+            <LinkedInIcon />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            href="https://www.instagram.com/fit.on.the.road?igsh=MWN1dTZ1M3RtZDhpaw=="
+            aria-label="Instagram"
+            sx={{ alignSelf: "center" }}
+            target="_blank"
+          >
+            <InstagramIcon />
+          </IconButton>
         </Stack>
       </Box>
     </Container>
   );
 }
+
+export default Footer;

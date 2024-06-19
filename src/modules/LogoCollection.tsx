@@ -29,7 +29,7 @@ const logoStyle = {
   opacity: 0.7,
 };
 
-export default function LogoCollection() {
+function LogoCollection() {
   const theme = useTheme();
   const logos = theme.palette.mode === "light" ? darkLogos : whiteLogos;
 
@@ -57,3 +57,5 @@ export default function LogoCollection() {
     </Box>
   );
 }
+
+export default LogoCollection;

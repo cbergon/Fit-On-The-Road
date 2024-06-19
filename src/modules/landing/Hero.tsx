@@ -8,7 +8,7 @@ import { alpha } from "@mui/material";
 
 // import cover from "@assets/images/Particuliers - Cours collectifs.jpeg";
 
-export default function Hero() {
+function Hero() {
   // #region SCROLLING FUNCTION
   const scrollToSection = (sectionId: string) => {
     const sectionElement = document.getElementById(sectionId);
@@ -115,7 +115,7 @@ export default function Hero() {
             width="100%"
             height="100%"
             className="rounded-[10px]"
-            src="https://www.youtube.com/embed/kivUfMytm4o?si=EhP-CYCddSazkvKt"
+            src="https://www.youtube.com/embed/_Zw_grCr49o?si=6jdvO5kJp0yBv0gQ"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -126,3 +126,5 @@ export default function Hero() {
     </Box>
   );
 }
+
+export default Hero;

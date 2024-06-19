@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function FAQ() {
+function FAQ() {
   const [expanded, setExpanded] = React.useState<string | false>("panel1");
 
   const handleChange =
@@ -152,3 +152,5 @@ export default function FAQ() {
     </Container>
   );
 }
+
+export default FAQ;

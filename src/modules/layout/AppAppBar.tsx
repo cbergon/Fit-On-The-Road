@@ -1,5 +1,6 @@
 import React from "react";
-import { alpha } from "@mui/material";
+
+import { alpha, IconButton } from "@mui/material";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,6 +12,8 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRounded from "@mui/icons-material/CloseRounded";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import { useNavigate } from "react-router-dom";
 
 const sections = [
   {
@@ -22,12 +25,12 @@ const sections = [
     dst: "highlights",
   },
   {
-    title: "Témoignages",
-    dst: "testimonials",
-  },
-  {
     title: "Tarifs",
     dst: "pricing",
+  },
+  {
+    title: "Avis Clients",
+    dst: "testimonials",
   },
   {
     title: "En savoir plus",
@@ -43,6 +46,7 @@ const logoStyle = {
 
 function AppAppBar() {
   const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -114,16 +118,22 @@ function AppAppBar() {
                 px: 0,
               }}
             >
-              <img
-                src="/logos/Full - Long - Kettle - Fond noir.svg"
-                style={logoStyle}
-                alt="logo fit on the road"
-              />
+              <Button
+                variant="text"
+                sx={{ borderRadius: "999px" }}
+                onClick={() => navigate("")}
+              >
+                <img
+                  src="/logos/Full - Long - Kettle - Fond noir.svg"
+                  style={logoStyle}
+                  alt="logo fit on the road"
+                />
+              </Button>
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 {sections.map((section) => (
                   <MenuItem
                     onClick={() => scrollToSection(section.dst)}
-                    sx={{ py: "6px", px: "12px" }}
+                    sx={{ py: "6px", px: "12px", borderRadius: "999px" }}
                   >
                     <Typography variant="body2" color="text.primary">
                       {section.title}
@@ -139,6 +149,15 @@ function AppAppBar() {
                 alignItems: "center",
               }}
             >
+              <IconButton
+                color="inherit"
+                href="https://www.instagram.com/fit.on.the.road?igsh=MWN1dTZ1M3RtZDhpaw=="
+                aria-label="Instagram"
+                sx={{ alignSelf: "center" }}
+                target="_blank"
+              >
+                <InstagramIcon />
+              </IconButton>
               <Button
                 color="primary"
                 variant="contained"

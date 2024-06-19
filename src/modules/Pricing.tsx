@@ -52,7 +52,7 @@ const tiers = [
   },
 ];
 
-export default function Pricing() {
+function Pricing() {
   const [collectiveCoachingPrice, setCollectiveCoachingPrice] =
     React.useState<CollectivePricing>("unit");
 
@@ -283,3 +283,5 @@ export default function Pricing() {
     </Container>
   );
 }
+
+export default Pricing;

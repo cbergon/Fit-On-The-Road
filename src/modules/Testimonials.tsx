@@ -46,7 +46,7 @@ const logoStyle = {
   opacity: 0.3,
 };
 
-export default function Testimonials() {
+function Testimonials() {
   return (
     <Container
       id="testimonials"
@@ -116,3 +116,5 @@ export default function Testimonials() {
     </Container>
   );
 }
+
+export default Testimonials;

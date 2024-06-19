@@ -39,7 +39,7 @@ const items = [
   },
 ];
 
-export default function IndividualFeatures() {
+function IndividualFeatures() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
@@ -281,3 +281,5 @@ export default function IndividualFeatures() {
     </Container>
   );
 }
+
+export default IndividualFeatures;

@@ -40,7 +40,7 @@ const items = [
   },
 ];
 
-export default function EnterpriseFeatures() {
+function EnterpriseFeatures() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
@@ -293,3 +293,5 @@ export default function EnterpriseFeatures() {
     </Container>
   );
 }
+
+export default EnterpriseFeatures;

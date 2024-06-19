@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { Button, TextField } from "@mui/material";
 
-export default function Contact() {
+function Contact() {
   return (
     <Box
       id="contact"
@@ -90,3 +90,5 @@ export default function Contact() {
     </Box>
   );
 }
+
+export default Contact;

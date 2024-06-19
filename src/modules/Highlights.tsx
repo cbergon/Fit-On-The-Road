@@ -51,7 +51,7 @@ const items = [
   },
 ];
 
-export default function Highlights() {
+function Highlights() {
   return (
     <Box
       id="highlights"
@@ -122,3 +122,5 @@ export default function Highlights() {
     </Box>
   );
 }
+
+export default Highlights;
