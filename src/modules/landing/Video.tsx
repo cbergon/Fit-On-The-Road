@@ -34,7 +34,7 @@ function Video() {
           width="100%"
           height="100%"
           className="rounded-[10px]"
-          src="https://www.youtube.com/embed/_Zw_grCr49o?si=6jdvO5kJp0yBv0gQ"
+          src="https://www.youtube.com/embed/DonYTJJK9KM?si=awd9tp9wyWRu2nIx"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"

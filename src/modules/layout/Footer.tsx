@@ -135,6 +135,7 @@ function Footer() {
         textAlign: { sm: "center", md: "left" },
       }}
     >
+      {/* FOOTER TOP */}
       <Box
         sx={{
           display: "flex",
@@ -203,7 +204,7 @@ function Footer() {
           </Box>
         </Box>
       </Box>
-      {/* TERMS OF USAGE */}
+      {/* FOOTER BOTTOM */}
       <Box
         sx={{
           display: "flex",
@@ -214,6 +215,7 @@ function Footer() {
           borderColor: "divider",
         }}
       >
+        {/* TERMS OF USAGE */}
         <div>
           <Link color="text.secondary" href="terms">
             Politique de confidentialité
@@ -226,6 +228,7 @@ function Footer() {
           </Link>
           <Copyright />
         </div>
+        {/* SOCIAL NETWORKS LINKS */}
         <Stack
           direction="row"
           justifyContent="left"

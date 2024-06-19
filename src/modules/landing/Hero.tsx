@@ -6,8 +6,6 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material";
 
-// import cover from "@assets/images/Particuliers - Cours collectifs.jpeg";
-
 function Hero() {
   // #region SCROLLING FUNCTION
   const scrollToSection = (sectionId: string) => {
