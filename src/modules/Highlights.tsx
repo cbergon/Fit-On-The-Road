@@ -77,9 +77,11 @@ function Highlights() {
             textAlign: { sm: "left", md: "center" },
           }}
         >
-          <Typography component="h2" variant="h4">
-            Les ambitions Fit On The Road
-          </Typography>
+          <h2>
+            <Typography component="h2" variant="h4">
+              Les ambitions Fit On The Road
+            </Typography>
+          </h2>
           <Typography variant="body1" sx={{ color: "grey.400" }}>
             Ces ambitions visent à créer un environnement de coaching sportif où
             les interactions sociales et le bien-être mental sont autant

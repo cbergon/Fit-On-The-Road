@@ -35,14 +35,16 @@ function LogoCollection() {
 
   return (
     <Box id="logoCollection" sx={{ py: 4 }}>
-      <Typography
-        component="h2"
-        variant="subtitle2"
-        align="center"
-        color="text.secondary"
-      >
-        Ils nous font confiance
-      </Typography>
+      <h2>
+        <Typography
+          component="h2"
+          variant="subtitle2"
+          align="center"
+          color="text.secondary"
+        >
+          Ils nous font confiance
+        </Typography>
+      </h2>
       <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 0.6 }}>
         {logos.map((logo, index) => (
           <Grid item key={index}>

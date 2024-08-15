@@ -18,10 +18,10 @@ const tiers = [
     title: "Entreprise",
     price: "Sur devis",
     description: [
-      "service proposé 1",
-      "service proposé 2",
-      "service proposé 3",
-      "service proposé 4",
+      "Coaching collectif en entreprise",
+      "Ateliers bien-etre",
+      "Programme de team building sportifs",
+      "Séances de sport mobile sur site avec matériel modulaire",
     ],
     buttonText: "Demander un devis",
     buttonVariant: "outlined",
@@ -30,8 +30,7 @@ const tiers = [
     title: "Cours collectifs",
     price: { unit: "20€", card: "150€" },
     description: [
-      "service proposé 1",
-      "service proposé 2",
+      "Séances de CrossFit en plein air",
       "service proposé 3",
       "service proposé 4",
     ],
@@ -42,10 +41,10 @@ const tiers = [
     title: "Coaching privé",
     price: { physical: "70€", distance: "50€" },
     description: [
-      "service proposé 1",
-      "service proposé 2",
-      "service proposé 3",
-      "service proposé 4",
+      "Coaching personnalisé en physique ou à distance",
+      "Programme d'entraînement sur mesure",
+      "Suivi nutritionne et bien-être mental",
+      "Accompagnement adapté aux contraintes et ambitions",
     ],
     buttonText: "RÉSERVER MA PREMIÈRE SÉANCE",
     buttonVariant: "outlined",
@@ -109,9 +108,11 @@ function Pricing() {
           textAlign: { sm: "left", md: "center" },
         }}
       >
-        <Typography component="h2" variant="h4" color="text.primary">
-          Tarifs
-        </Typography>
+        <h2>
+          <Typography component="h2" variant="h4" color="text.primary">
+            Tarifs
+          </Typography>
+        </h2>
         {/* <Typography variant="body1" color="text.secondary">
           Quickly build an effective pricing table for your potential customers
           with this layout. <br />
@@ -162,19 +163,21 @@ function Pricing() {
                     color: tier.title === "Entreprise" ? "grey.50" : undefined,
                   }}
                 >
-                  <Typography
-                    component="h3"
-                    variant="h2"
-                    height={tier.title === "Entreprise" ? "110.75px" : "72px"}
-                  >
-                    {typeof tier.price === "string" && tier.price}
-                    {typeof tier.price !== "string" &&
-                      tier.title === "Cours collectifs" &&
-                      tier.price[collectiveCoachingPrice]}
-                    {typeof tier.price !== "string" &&
-                      tier.title === "Coaching privé" &&
-                      tier.price[privateCoachingPrice]}
-                  </Typography>
+                  <h2>
+                    <Typography
+                      component="h3"
+                      variant="h2"
+                      height={tier.title === "Entreprise" ? "110.75px" : "72px"}
+                    >
+                      {typeof tier.price === "string" && tier.price}
+                      {typeof tier.price !== "string" &&
+                        tier.title === "Cours collectifs" &&
+                        tier.price[collectiveCoachingPrice]}
+                      {typeof tier.price !== "string" &&
+                        tier.title === "Coaching privé" &&
+                        tier.price[privateCoachingPrice]}
+                    </Typography>
+                  </h2>
                   <Typography component="h3" variant="h6">
                     {tier.title === "Coaching privé" && "la séance"}
                   </Typography>
