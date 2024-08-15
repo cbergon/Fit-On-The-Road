@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { alpha } from "@mui/material";
+import { alpha, Card } from "@mui/material";
 import Video from "./Video";
 
 import cover from "../../assets/images/individual-collective-coaching.jpeg";
@@ -60,6 +60,14 @@ function Hero() {
             width: { xs: "100%", sm: "70%" },
           }}
         >
+          {/* <Card
+            sx={{
+              p: "8px",
+              display: "flex",
+              flexDirection: "column",
+              backgroundColor: "rgb(34, 31, 29, 0.50)",
+            }}
+          > */}
           {/* HERO CATCHPHRASE */}
           <h1>
             <Typography
@@ -78,12 +86,19 @@ function Hero() {
           {/* HERO SUBTEXT */}
           <Typography
             textAlign="center"
-            color="text.secondary"
+            color="text"
             sx={{
               alignSelf: "center",
               width: { sm: "100%", md: "80%" },
-              backgroundColor: "black",
               padding: "8px",
+              background:
+                "linear-gradient(to top, rgba(255, 0, 0, 0.7) 0%, rgba(255, 0, 0, 0.7) 100%, transparent 10.01%) no-repeat left bottom / 0 100%",
+              transition: "background-size 0.5s",
+              color: "transparent",
+              "&:hover": {
+                color: "white",
+                backgroundSize: "100% 100%",
+              },
               borderRadius: "4px",
               backdropFilter: "grey(90%)",
             }}
@@ -92,6 +107,7 @@ function Hero() {
             permettre à chacun de terminer une séance et de progresser quel que
             soit le niveau.
           </Typography>
+          {/* </Card> */}
           {/* HERO CALL TO ACTION */}
           <Stack
             direction={{ xs: "column", sm: "row" }}
