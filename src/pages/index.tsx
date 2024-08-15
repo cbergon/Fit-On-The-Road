@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 
 import Hero from "@app/modules/landing/Hero";
-import LogoCollection from "@app/modules/LogoCollection";
+// import LogoCollection from "@app/modules/LogoCollection";
 import Highlights from "@app/modules/Highlights";
 import Pricing from "@app/modules/Pricing";
 import Testimonials from "@app/modules/Testimonials";
@@ -18,7 +18,7 @@ function LandingPage() {
       <Hero />
       <Box sx={{ bgcolor: "background.default" }}>
         <EnterpriseFeatures />
-        <LogoCollection />
+        {/* <LogoCollection /> */}
         <IndividualFeatures />
         <Divider />
         <Highlights />

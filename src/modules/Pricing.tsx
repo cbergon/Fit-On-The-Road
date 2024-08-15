@@ -30,9 +30,10 @@ const tiers = [
     title: "Cours collectifs",
     price: { unit: "20€", card: "150€" },
     description: [
-      "Séances de CrossFit en plein air",
-      "service proposé 3",
-      "service proposé 4",
+      "Séances de CrossFit en plein air à Bois d'Arcy",
+      "Adapté à tous les niveaux de condition physique",
+      "Séances en petit comité pour une attention idéale",
+      "Objectifs variés (force, endurange, remise en forme)",
     ],
     buttonText: "RÉSERVER MA SÉANCE D'ESSAI",
     buttonVariant: "contained",
@@ -43,7 +44,7 @@ const tiers = [
     description: [
       "Coaching personnalisé en physique ou à distance",
       "Programme d'entraînement sur mesure",
-      "Suivi nutritionne et bien-être mental",
+      "Suivi nutritionnel et bien-être mental",
       "Accompagnement adapté aux contraintes et ambitions",
     ],
     buttonText: "RÉSERVER MA PREMIÈRE SÉANCE",
@@ -113,12 +114,11 @@ function Pricing() {
             Tarifs
           </Typography>
         </h2>
-        {/* <Typography variant="body1" color="text.secondary">
-          Quickly build an effective pricing table for your potential customers
-          with this layout. <br />
-          It&apos;s built with default Material UI components with little
-          customization.
-        </Typography> */}
+        <Typography variant="body1" color="text.secondary">
+          {`Ces services sont conçus pour répondre aux besoins variés des clients,
+          qu'ils soient entreprises ou particuliers, et visent à offrir une
+          expérience de coaching complète et personnalisée.`}
+        </Typography>
       </Box>
       <Grid container spacing={3} alignItems="stretch" justifyContent="center">
         {tiers.map((tier) => (
@@ -257,9 +257,12 @@ function Pricing() {
                     <Typography
                       component="text"
                       variant="subtitle2"
+                      height="40px"
                       sx={{
                         color:
                           tier.title === "Entreprise" ? "grey.200" : undefined,
+                        display: "flex",
+                        alignItems: "center",
                       }}
                     >
                       {line}

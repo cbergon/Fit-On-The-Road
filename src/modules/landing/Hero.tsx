@@ -61,23 +61,32 @@ function Hero() {
           }}
         >
           {/* HERO CATCHPHRASE */}
-          <Typography
-            component="h1"
-            variant="h1"
-            fontWeight="bold"
-            sx={{
-              fontSize: "clamp(3rem, 10vw, 3.4rem)",
-              textAlign: "center",
-              color: "primary.light",
-            }}
-          >
-            La salle de sport qui vient à vous.
-          </Typography>
+          <h1>
+            <Typography
+              component="h1"
+              variant="h1"
+              fontWeight="bold"
+              sx={{
+                fontSize: "clamp(3rem, 10vw, 3.4rem)",
+                textAlign: "center",
+                color: "primary.light",
+              }}
+            >
+              La salle de sport qui vient à vous.
+            </Typography>
+          </h1>
           {/* HERO SUBTEXT */}
           <Typography
             textAlign="center"
             color="text.secondary"
-            sx={{ alignSelf: "center", width: { sm: "100%", md: "80%" } }}
+            sx={{
+              alignSelf: "center",
+              width: { sm: "100%", md: "80%" },
+              backgroundColor: "black",
+              padding: "8px",
+              borderRadius: "4px",
+              backdropFilter: "grey(90%)",
+            }}
           >
             En groupe ou individuel, notre suivi aura toujours pour objectif de
             permettre à chacun de terminer une séance et de progresser quel que

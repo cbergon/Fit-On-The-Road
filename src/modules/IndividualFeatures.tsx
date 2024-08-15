@@ -104,7 +104,10 @@ function IndividualFeatures() {
               container
               item
               gap={1}
-              sx={{ display: { xs: "auto", sm: "none" } }}
+              sx={{
+                display: { xs: "flex", sm: "none" },
+                justifyContent: "center",
+              }}
             >
               {items.map(({ title }, index) => (
                 <Chip
@@ -140,7 +143,7 @@ function IndividualFeatures() {
                   minHeight: 280,
                 }}
               />
-              <Box sx={{ px: 2, pb: 2 }}>
+              <Box sx={{ px: 2, pb: 2, pt: 2 }}>
                 <Typography
                   component="h3"
                   color="text.primary"

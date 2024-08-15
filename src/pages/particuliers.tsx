@@ -35,18 +35,20 @@ function Particuliers() {
         }}
       >
         <Box sx={{ height: "100%" }} />
-        <Typography
-          component="h1"
-          variant="h1"
-          fontWeight="bold"
-          sx={{
-            fontSize: "clamp(3rem, 10vw, 3.4rem)",
-            textAlign: "center",
-            color: "primary.light",
-          }}
-        >
-          La salle de sport qui vient à toi.
-        </Typography>
+        <h1>
+          <Typography
+            component="h1"
+            variant="h1"
+            fontWeight="bold"
+            sx={{
+              fontSize: "clamp(3rem, 10vw, 3.4rem)",
+              textAlign: "center",
+              color: "primary.light",
+            }}
+          >
+            La salle de sport qui vient à toi.
+          </Typography>
+        </h1>
         <Typography
           textAlign="center"
           color="text.secondary"
