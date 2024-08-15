@@ -31,7 +31,7 @@ function FAQ() {
       }}
     >
       <Typography
-        component="h2"
+        component="h4"
         variant="h4"
         color="text.primary"
         sx={{
@@ -61,7 +61,7 @@ function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              {`Dans la zone d'activité sportive à Bois d'Arcy, prêt du Skate Park et du Tennis.`}
+              {`Dans la zone d'activité sportive à Bois d'Arcy, près du Skate Park et du Tennis.`}
             </Typography>
             <iframe
               title="collective coaching location"

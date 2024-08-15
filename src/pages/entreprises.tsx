@@ -36,7 +36,7 @@ function Entreprises() {
       >
         <Box sx={{ height: "100%" }} />
         <Typography
-          component="span"
+          component="h1"
           variant="h1"
           fontWeight="bold"
           sx={{
@@ -45,7 +45,7 @@ function Entreprises() {
             color: "primary.light",
           }}
         >
-          La salle de sport se déplace dans vos locaux.
+          La salle de sport arrive dans vos locaux.
         </Typography>
         <Typography
           textAlign="center"

@@ -140,6 +140,7 @@ function IndividualFeatures() {
               />
               <Box sx={{ px: 2, pb: 2 }}>
                 <Typography
+                  component="h3"
                   color="text.primary"
                   variant="body2"
                   fontWeight="bold"
@@ -238,6 +239,7 @@ function IndividualFeatures() {
                       <Typography
                         color="text.primary"
                         variant="h5"
+                        component="h5"
                         fontWeight="bold"
                       >
                         {title}

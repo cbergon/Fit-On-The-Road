@@ -7,44 +7,47 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import corinne from "@app/assets/images/client-corinne.jpg";
+import vincent from "@app/assets/images/client-vincent.jpg";
 
 const userTestimonials = [
   {
-    avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />,
-    name: "Remy Sharp",
-    occupation: "Senior Engineer",
-    testimonial:
-      "I absolutely love how versatile this product is! Whether I'm tackling work projects or indulging in my favorite hobbies, it seamlessly adapts to my changing needs. Its intuitive design has truly enhanced my daily routine, making tasks more efficient and enjoyable.",
+    avatar: (
+      <img
+        alt="vincent"
+        src={vincent}
+        className="rounded object-cover md:w-full w-[50%] object-top"
+      />
+    ),
+    name: "Vincent",
+    occupation: "38 ans, ex sportif de haut niveau",
+    testimonial: [
+      "Ayant arrêté ma carrière depuis 3 ans j’ai toujours ressenti le besoin de faire du sport.",
+      "Ju est passé par là avec sa bonne humeur et son professionnalisme.",
+      "N’étant pas à Paris mais à Lyon, Ju me fais des programmes à ma convenance, à mes besoins et mes envies toujours dans un souci de progression et de sensations de bien être pour ma tête et mon corps evidemment 💪🏼.",
+      "Ju est toujours disponible au besoin, répond et sait parfaitement s’adapter à mes demandes selon mon état de forme, mes obligations professionnelles ou mes évolutions.",
+      "Disposant d’une vraie connaissance professionnelle et personnelle de son activité, il sait toujours varier les exercices pour ne pas tomber dans une routine ou une lassitude du sport.",
+      "Bref allez y les yeux fermés 😈😈😈",
+    ],
   },
   {
-    avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />,
-    name: "Travis Howard",
-    occupation: "Lead Product Designer",
-    testimonial:
-      "One of the standout features of this product is the exceptional customer support. In my experience, the team behind this product has been quick to respond and incredibly helpful. It's reassuring to know that they stand firmly behind their product.",
-  },
-  {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />,
-    name: "Cindy Baker",
-    occupation: "CTO",
-    testimonial:
-      "The level of simplicity and user-friendliness in this product has significantly simplified my life. I appreciate the creators for delivering a solution that not only meets but exceeds user expectations.",
+    avatar: (
+      <img
+        alt="corinne"
+        src={corinne}
+        className="rounded object-cover md:w-full w-[50%] object-top object"
+      />
+    ),
+    name: "Corinne",
+    occupation: "60 ans, en recherche d'ajustement à sa santé",
+    testimonial: [
+      "J’ai fait la connaissance de Julien en 2017. Son professionnalisme, son dynamisme, sa bonne humeur, son humour, sa bienveillance m’ont tout de suite emballée.",
+      "Julien nous propose d’excellents trainings à l’extérieur, des moments exceptionnels. Son accompagnement coach privé m'a d'ailleurs permis de découvrir la boxe qui, en période de COVID, a été une vraie soupape de décompression.",
+      "Avec une rupture des LCA du genou gauche non opérée il y a plusieurs années ainsi qu’une Arthrodèse lombaire en janvier 2023, Julien a été à l'écoute de mes craintes et de mes envies. Il m’as remise sur pied en s’adaptant à mon rythme, tout en me permettant de me dépasser et d’accomplir des choses que je n’osais plus faire.",
+      "Merci Coach Juju.",
+    ],
   },
 ];
-
-const logos = [
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628e8573c43893fe0ace_Sydney-white.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d520d0517ae8e8ddf13_Bern-white.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f46794c159024c1af6d44_Montreal-white.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e891fa22f89efd7477a_TerraLight.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a09d1f6337b1dfed14ab_colorado-white.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5caa77bf7d69fb78792e_Ankara-white.svg",
-];
-
-const logoStyle = {
-  width: "64px",
-  opacity: 0.3,
-};
 
 function Testimonials() {
   return (
@@ -69,13 +72,20 @@ function Testimonials() {
         <Typography component="h2" variant="h4" color="text.primary">
           Avis clients
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography component="h2" variant="body1" color="text.secondary">
           {`Parce qu'ils en parlent mieux que nous !`}
         </Typography>
       </Box>
       <Grid container spacing={2}>
-        {userTestimonials.map((testimonial, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
+        {userTestimonials.map((testimonial) => (
+          <Grid
+            item
+            // xs={12}
+            // sm={6}
+            md={6}
+            key={`testimonials-${testimonial.name}`}
+            sx={{ display: "flex" }}
+          >
             <Card
               sx={{
                 display: "flex",
@@ -86,9 +96,16 @@ function Testimonials() {
               }}
             >
               <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                  {testimonial.testimonial}
-                </Typography>
+                <div className="flex flex-col md:flex-row gap-2">
+                  {testimonial.avatar}
+                  <div className="flex flex-col gap-2">
+                    {testimonial.testimonial.map((sentence) => (
+                      <Typography variant="body2" color="text.secondary">
+                        {sentence}
+                      </Typography>
+                    ))}
+                  </div>
+                </div>
               </CardContent>
               <Box
                 sx={{
@@ -99,14 +116,8 @@ function Testimonials() {
                 }}
               >
                 <CardHeader
-                  avatar={testimonial.avatar}
                   title={testimonial.name}
                   subheader={testimonial.occupation}
-                />
-                <img
-                  src={logos[index]}
-                  alt={`Logo ${index + 1}`}
-                  style={logoStyle}
                 />
               </Box>
             </Card>

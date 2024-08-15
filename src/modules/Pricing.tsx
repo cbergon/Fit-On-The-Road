@@ -160,14 +160,12 @@ function Pricing() {
                     display: "flex",
                     alignItems: "baseline",
                     color: tier.title === "Entreprise" ? "grey.50" : undefined,
-                    // height: "auto",
                   }}
                 >
                   <Typography
                     component="h3"
                     variant="h2"
                     height={tier.title === "Entreprise" ? "110.75px" : "72px"}
-                    // lineHeight={}
                   >
                     {typeof tier.price === "string" && tier.price}
                     {typeof tier.price !== "string" &&

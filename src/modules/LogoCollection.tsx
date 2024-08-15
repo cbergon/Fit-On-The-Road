@@ -36,7 +36,7 @@ function LogoCollection() {
   return (
     <Box id="logoCollection" sx={{ py: 4 }}>
       <Typography
-        component="p"
+        component="h2"
         variant="subtitle2"
         align="center"
         color="text.secondary"

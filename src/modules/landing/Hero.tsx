@@ -7,6 +7,8 @@ import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material";
 import Video from "./Video";
 
+import cover from "../../assets/images/individual-collective-coaching.jpeg";
+
 function Hero() {
   // #region SCROLLING FUNCTION
   const scrollToSection = (sectionId: string) => {
@@ -28,12 +30,15 @@ function Hero() {
       id="hero"
       sx={{
         width: "100%",
-        // height: "100vh",
+        height: "100vh",
         display: "flex",
-        // backgroundImage: `url("${cover}")`,
-        backgroundImage: `linear-gradient(#000, ${alpha("#690000", 0.0)})`,
-        backgroundSize: "100% 100%",
-        backgroundRepeat: "fit",
+        backgroundImage: `url("${cover}")`,
+        // backgroundImage: `linear-gradient(#000, ${alpha("#690000", 0.0)})`,
+        // backgroundImage: `diamond-gradient(#000, ${alpha("#000000", 0.7)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPositionX: "38%",
+        backgroundPositionY: "50%",
       }}
     >
       <Container
@@ -57,7 +62,7 @@ function Hero() {
         >
           {/* HERO CATCHPHRASE */}
           <Typography
-            component="span"
+            component="h1"
             variant="h1"
             fontWeight="bold"
             sx={{
@@ -95,7 +100,7 @@ function Hero() {
             </Button>
           </Stack>
         </Stack>
-        <Video />
+        {/* <Video /> */}
       </Container>
     </Box>
   );

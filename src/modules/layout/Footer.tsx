@@ -180,7 +180,7 @@ function Footer() {
                   width: "100%",
                 }}
               >
-                <Typography variant="body2" fontWeight={600}>
+                <Typography component="h4" variant="body2" fontWeight={600}>
                   {column.title}
                 </Typography>
                 {column.title === "Nos services" &&

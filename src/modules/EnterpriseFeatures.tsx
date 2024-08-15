@@ -56,7 +56,7 @@ function EnterpriseFeatures() {
           <Grid item xs={12} md={6}>
             <div>
               <Typography
-                component="h2"
+                component="h4"
                 variant="h4"
                 className="uppercase"
                 color="text.primary"
@@ -221,6 +221,7 @@ function EnterpriseFeatures() {
                     </Box>
                     <Box sx={{ textTransform: "none" }}>
                       <Typography
+                        component="h5"
                         color="text.primary"
                         variant="h5"
                         fontWeight="bold"

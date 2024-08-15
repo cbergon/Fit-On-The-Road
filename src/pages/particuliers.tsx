@@ -36,7 +36,7 @@ function Particuliers() {
       >
         <Box sx={{ height: "100%" }} />
         <Typography
-          component="span"
+          component="h1"
           variant="h1"
           fontWeight="bold"
           sx={{
