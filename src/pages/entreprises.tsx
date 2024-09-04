@@ -3,6 +3,8 @@ import React from "react";
 import { alpha, Box, Button, Container, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import LogoCollection from "@app/modules/LogoCollection";
+import { UserType } from "@app/types/types";
+import Contact from "@shared/Contact";
 
 const logoStyle = {
   width: "140px",
@@ -69,6 +71,7 @@ function Entreprises() {
             alt="logo fit on the road"
           />
         </Button>
+        <Contact defaultUserType={UserType.ENTERPRISE} />
       </Container>
     </Box>
   );

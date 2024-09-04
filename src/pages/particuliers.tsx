@@ -1,4 +1,6 @@
+import { UserType } from "@app/types/types";
 import { alpha, Box, Button, Container, Typography } from "@mui/material";
+import Contact from "@shared/Contact";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -67,6 +69,7 @@ function Particuliers() {
             alt="logo fit on the road"
           />
         </Button>
+        <Contact defaultUserType={UserType.INDIVIDUAL} />
       </Container>
     </Box>
   );

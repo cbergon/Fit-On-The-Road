@@ -11,6 +11,7 @@ import FAQ from "@app/modules/FAQ";
 import Contact from "@shared/Contact";
 import EnterpriseFeatures from "@app/modules/EnterpriseFeatures";
 import IndividualFeatures from "@app/modules/IndividualFeatures";
+import { UserType } from "@app/types/types";
 
 function LandingPage() {
   return (
@@ -26,7 +27,7 @@ function LandingPage() {
         <Divider />
         <Testimonials />
         <Divider />
-        <Contact />
+        <Contact defaultUserType={UserType.ENTERPRISE} />
         <Divider />
         <FAQ />
       </Box>

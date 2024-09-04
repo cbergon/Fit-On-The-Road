@@ -11,8 +11,13 @@ import {
 } from "@mui/material";
 import { UserType } from "@app/types/types";
 
-function Contact() {
-  const [userType, setUserType] = React.useState<UserType>(UserType.INDIVIDUAL);
+interface ContactProps {
+  defaultUserType?: UserType;
+}
+
+function Contact(props: ContactProps) {
+  const { defaultUserType = UserType.ENTERPRISE } = props;
+  const [userType, setUserType] = React.useState<UserType>(defaultUserType);
   const handleChange = (
     event: React.MouseEvent<HTMLElement, MouseEvent>,
     value: UserType,
