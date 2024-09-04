@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
-import { CollectivePricing, PrivatePricing } from "@app/types/Pricing";
+import { CollectivePricing, PrivatePricing } from "@app/types/types";
 
 const tiers = [
   {

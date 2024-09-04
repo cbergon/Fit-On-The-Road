@@ -2,6 +2,7 @@ import React from "react";
 
 import { alpha, Box, Button, Container, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import LogoCollection from "@app/modules/LogoCollection";
 
 const logoStyle = {
   width: "140px",
@@ -46,9 +47,10 @@ function Entreprises() {
               color: "primary.light",
             }}
           >
-            La salle de sport arrive dans vos locaux.
+            La salle de sport qui vient à vous.
           </Typography>
         </h1>
+        <LogoCollection />
         <Typography
           textAlign="center"
           color="text.secondary"
@@ -59,7 +61,7 @@ function Entreprises() {
         <Button
           variant="text"
           sx={{ borderRadius: "999px" }}
-          onClick={() => navigate("")}
+          onClick={() => navigate("/")}
         >
           <img
             src="/logos/Full - Long - Kettle - Fond noir.svg"

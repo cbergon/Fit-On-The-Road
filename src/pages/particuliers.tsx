@@ -59,7 +59,7 @@ function Particuliers() {
         <Button
           variant="text"
           sx={{ borderRadius: "999px" }}
-          onClick={() => navigate("")}
+          onClick={() => navigate("/")}
         >
           <img
             src="/logos/Full - Long - Skull - Fond noir.svg"

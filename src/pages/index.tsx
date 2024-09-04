@@ -18,7 +18,6 @@ function LandingPage() {
       <Hero />
       <Box sx={{ bgcolor: "background.default" }}>
         <EnterpriseFeatures />
-        {/* <LogoCollection /> */}
         <IndividualFeatures />
         <Divider />
         <Highlights />
