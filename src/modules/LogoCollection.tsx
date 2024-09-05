@@ -1,27 +1,36 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import atlantic from "@app/assets/images/companies/atlantic.png";
+import s2sAuto from "@app/assets/images/companies/s2sAuto.png";
+import BusinessTwoToneIcon from "@mui/icons-material/BusinessTwoTone";
 
-const darkLogos = [
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628889c3bdf1129952dc_Sydney-black.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d4d8b829a89976a419c_Bern-black.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f467502f091ccb929529d_Montreal-black.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e911fa22f2203d7514c_TerraDark.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a0990f3717787fd49245_colorado-black.svg",
-  "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5ca4e548b0deb1041c33_Ankara-black.svg",
+const logos = [
+  {
+    name: "S2S Auto",
+    logo: s2sAuto,
+  },
+  {
+    name: "E-module",
+    logo: atlantic,
+  },
+  {
+    name: "Groupe Atlantic",
+    logo: atlantic,
+  },
+  {
+    name: "Sodrexal Audit et Conseil",
+    logo: null,
+  },
 ];
 
 const logoStyle = {
-  width: "100px",
-  height: "80px",
   margin: "0 32px",
   opacity: 0.7,
+  filter: "grayscale(70%)",
 };
 
 function LogoCollection() {
-  const logos = darkLogos;
-
   return (
     <Box id="logoCollection" sx={{ py: 4 }}>
       <h2>
@@ -34,17 +43,34 @@ function LogoCollection() {
           Ils nous font confiance
         </Typography>
       </h2>
-      <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 0.6 }}>
-        {logos.map((logo, index) => (
-          <Grid item key={index}>
-            <img
-              src={logo}
-              alt={`Fake company number ${index + 1}`}
-              style={logoStyle}
-            />
-          </Grid>
+      <div className="flex justify-evenly gap-4">
+        {logos.map(({ logo, name }) => (
+          <div className="flex flex-col gap-2 items-center justify-center w-[150px]">
+            <div className="h-[80px] w-[100px] flex align-middle justify-center">
+              {logo && (
+                <img
+                  src={logo}
+                  alt={`${name} logo`}
+                  className="object-contain"
+                  style={logoStyle}
+                />
+              )}
+              {!logo && (
+                <BusinessTwoToneIcon
+                  sx={{
+                    fontSize: "60px",
+                    filter:
+                      "invert(68%) hue-rotate(3deg) brightness(130%) contrast(106%)",
+                  }}
+                />
+              )}
+            </div>
+            <Typography variant="caption" align="center">
+              {name}
+            </Typography>
+          </div>
         ))}
-      </Grid>
+      </div>
     </Box>
   );
 }

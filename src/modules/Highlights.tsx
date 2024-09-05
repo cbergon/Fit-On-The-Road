@@ -90,8 +90,8 @@ function Highlights() {
           </Typography>
         </Box>
         <Grid container spacing={2.5}>
-          {items.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+          {items.map((item) => (
+            <Grid item xs={12} sm={6} md={4} key={`grid-${item.title}`}>
               <Stack
                 direction="column"
                 color="inherit"

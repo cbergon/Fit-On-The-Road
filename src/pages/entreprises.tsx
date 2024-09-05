@@ -1,7 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { alpha, Box, Button, Container, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+
 import LogoCollection from "@app/modules/LogoCollection";
 import { UserType } from "@app/types/types";
 import Contact from "@shared/Contact";

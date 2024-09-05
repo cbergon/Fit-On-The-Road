@@ -19,6 +19,7 @@ import teamBuildingPic from "@assets/images/entreprises-team-building.jpeg";
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
+    value: "collective-coaching",
     title: "Cours collectifs en société",
     description:
       "Offrez à vos salariés le confort d'un coach qui se déplace sur site à l'année.",
@@ -26,6 +27,7 @@ const items = [
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
+    value: "team-building",
     title: "Team building & événements",
     description:
       "Créer un moment de partage, d'effort et de cohésion pour développer l'esprit d'équipe.",
@@ -33,6 +35,7 @@ const items = [
   },
   {
     icon: <DevicesRoundedIcon />,
+    value: "space-creation",
     title: "Création d'espace forme",
     description:
       "Aménagez vos locaux en fonction de vos besoins afin de permettre à vos salariés de faire du sport en toute autonomie.",

@@ -4,8 +4,6 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { alpha, Card } from "@mui/material";
-import Video from "./Video";
 
 import cover from "../../assets/images/individual-collective-coaching.jpeg";
 
